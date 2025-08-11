@@ -1,16 +1,21 @@
 package br.com.one.conversorDeMoedas.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Map;
 
 public class ExchangeResponse {
-    private String base_code;
-    private Map<String, Double> conversion_rates;
+    @SerializedName("base_code")
+    private String baseCode;
 
-    public String getBase_code() {
-        return base_code;
+    @SerializedName("conversion_rates")
+    private Map<String, Double> conversionRates;
+
+    public String getBaseCode() {
+        return baseCode;
     }
 
-    public Map<String, Double> getConversion_rates() {
-        return conversion_rates;
+    public Map<String, Double> getConversionRates() {
+        return conversionRates;
     }
 }
